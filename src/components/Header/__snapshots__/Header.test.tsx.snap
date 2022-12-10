@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <nav>
+    <a
+      href="/news/1"
+    >
+      Logo Here
+    </a>
+    <a
+      class="no-underline"
+      href="/news/1"
+    >
+      Top
+    </a>
+    <a
+      class="no-underline"
+      href="/newest/1"
+    >
+      New
+    </a>
+    <a
+      class="no-underline"
+      href="/show/1"
+    >
+      Show
+    </a>
+    <a
+      class="no-underline"
+      href="/ask/1"
+    >
+      Ask
+    </a>
+    <a
+      class="no-underline"
+      href="/jobs/1"
+    >
+      Jobs
+    </a>
+  </nav>
+</div>
+`;
