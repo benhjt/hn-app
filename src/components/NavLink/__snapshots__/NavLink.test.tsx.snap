@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLink renders correctly 1`] = `
+<div>
+  <a
+    class="no-underline"
+    href="/news/1"
+  >
+    Top
+  </a>
+</div>
+`;
+
+exports[`NavLink renders correctly when link is selected 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="underline"
+    href="/news/1"
+  >
+    Top
+  </a>
+</div>
+`;
