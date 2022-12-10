@@ -7,21 +7,34 @@ type FeedProps = {
 
 const Feed: React.FC<FeedProps> = ({ feedType }) => {
   const { page } = useParams<'page'>();
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`https://node-hnapi.herokuapp.com/${feedType}?page=${page}`)
-      .then((response) => response.json())
-      .then((feedData) => {
-        setData(feedData);
-      });
+    const fetchData = async () => {
+      setIsLoading(true);
+      const response = await fetch(
+        `https://node-hnapi.herokuapp.com/${feedType}?page=${page}`
+      );
+      const feedData = await response.json();
+      setData(feedData);
+      setIsLoading(false);
+    };
+
+    fetchData();
   }, [feedType, page]);
 
   return (
     <div>
-      {data.map((item: any, index) => (
-        <>{item.title}</>
-      ))}
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          {data.map((item: any, index) => (
+            <>{item.title}</>
+          ))}
+        </>
+      )}
     </div>
   );
 };
