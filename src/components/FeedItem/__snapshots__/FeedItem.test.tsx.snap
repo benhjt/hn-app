@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedItem renders correctly 1`] = `
+<div>
+  <div>
+    <div>
+      1
+    </div>
+    <div>
+      <div>
+        <a
+          href="https://www.google.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          This cool story!
+        </a>
+         
+        (
+        <a
+          href="google.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          google.com
+        </a>
+        )
+      </div>
+      <div>
+        54
+         points by
+         
+        <a
+          href="/user/username123"
+        >
+          username123
+        </a>
+         
+        8 hours ago
+         |
+         
+        <a
+          href="/story/33934580"
+        >
+          226
+           comments
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
