@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from '../Header';
 import Feed from '../Feed';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="container mx-auto">
       <Router>
@@ -21,6 +21,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;
