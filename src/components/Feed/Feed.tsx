@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
+import { FeedItem, FeedItemData } from '../FeedItem';
+
 type FeedProps = {
   feedType: string;
 };
@@ -30,8 +32,8 @@ const Feed: React.FC<FeedProps> = ({ feedType }) => {
         <p>Loading...</p>
       ) : (
         <>
-          {data.map((item: any, index) => (
-            <>{item.title}</>
+          {data.map((item: FeedItemData, index) => (
+            <FeedItem item={item} index={index} key={item.id} />
           ))}
         </>
       )}
