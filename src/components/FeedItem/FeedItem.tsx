@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-type FeedItemData = {
+export type FeedItemData = {
   id: number;
   title: string;
   points: number;
@@ -20,7 +20,7 @@ type FeedItemProps = {
   index: number;
 };
 
-const FeedItem: React.FC<FeedItemProps> = ({ item, index }) => (
+export const FeedItem: React.FC<FeedItemProps> = ({ item, index }) => (
   <div>
     <div>{index}</div>
     <div>

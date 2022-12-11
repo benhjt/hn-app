@@ -1,1 +1,1 @@
-export { default } from './FeedItem';
+export * from './FeedItem';
