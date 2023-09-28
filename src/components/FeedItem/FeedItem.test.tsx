@@ -14,6 +14,7 @@ const item = {
   type: 'link',
   url: 'https://www.google.com',
   domain: 'google.com',
+  comments: [],
 };
 
 describe('FeedItem', () => {

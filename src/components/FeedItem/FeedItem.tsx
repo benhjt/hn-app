@@ -1,46 +1,60 @@
-import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Separator from '../Separator/Separator';
+import { StoryType } from '../../types';
 
-import { Link } from 'react-router-dom';
-
-export type FeedItemData = {
-  id: number;
-  title: string;
-  points: number;
-  user: string;
-  time: number;
-  time_ago: string;
-  comments_count: number;
-  type: string;
-  url: string;
-  domain: string;
+const calculateIndex = (index: number, page: string): number => {
+  if (page === '1' || page === undefined) {
+    return index + 1;
+  } else {
+    return index + 1 + (Number(page) - 1) * 30;
+  }
 };
 
-type FeedItemProps = {
-  item: FeedItemData;
+export const FeedItem = ({
+  item,
+  index,
+}: {
+  item: StoryType;
   index: number;
-};
-
-export const FeedItem: React.FC<FeedItemProps> = ({ item, index }) => (
-  <div>
-    <div>{index}</div>
-    <div>
-      <div>
-        <a href={item.url} target="_blank" rel="noopener noreferrer">
-          {item.title}
-        </a>{' '}
-        (
-        <a href={item.domain} target="_blank" rel="noopener noreferrer">
-          {item.domain}
-        </a>
-        )
-      </div>
-      <div>
-        {item.points} points by{' '}
-        <Link to={`/user/${item.user}`}>{item.user}</Link> {item.time_ago} |{' '}
-        <Link to={`/story/${item.id}`}>{item.comments_count} comments</Link>
+}) => {
+  const { page } = useParams<'page'>();
+  return (
+    <div className="flex">
+      {page ? <div className="mr-1">{calculateIndex(index, page)}.</div> : ''}
+      <div className="flex flex-col">
+        <div className="flex flex-row align space-x-2">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="peer visited:text-gray-500"
+          >
+            {item.title}
+          </a>
+          <a
+            href={item.domain}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="peer-visited:text-gray-500"
+          >
+            ({item.domain})
+          </a>
+        </div>
+        <div className="flex flex-row text-gray-500 text-xs">
+          {item.points} points by&nbsp;
+          <Link to={`/user/${item.user}`} className="hover:underline">
+            {item.user}
+          </Link>
+          &nbsp;
+          {item.time_ago}
+          <Separator />
+          <Link to={`/story/${item.id}`} className="hover:underline">
+            {item.comments_count} comments
+          </Link>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default FeedItem;

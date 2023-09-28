@@ -2,44 +2,54 @@
 
 exports[`FeedItem renders correctly 1`] = `
 <div>
-  <div>
-    <div>
-      1
-    </div>
-    <div>
-      <div>
+  <div
+    class="flex mb-2"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex flex-row align space-x-2"
+      >
         <a
+          class="peer visited:text-gray-500"
           href="https://www.google.com"
           rel="noopener noreferrer"
           target="_blank"
         >
           This cool story!
         </a>
-         
-        (
         <a
+          class="peer-visited:text-gray-500"
           href="google.com"
           rel="noopener noreferrer"
           target="_blank"
         >
+          (
           google.com
+          )
         </a>
-        )
       </div>
-      <div>
+      <div
+        class="flex flex-row text-gray-500 text-xs"
+      >
         54
-         points by
-         
+         points by 
         <a
+          class="hover:underline"
           href="/user/username123"
         >
           username123
         </a>
-         
+         
         8 hours ago
-         |
-         
+        <div
+          class="px-2"
+        >
+          |
+        </div>
         <a
+          class="hover:underline"
           href="/story/33934580"
         >
           226

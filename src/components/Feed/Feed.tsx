@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { FeedItem, FeedItemData } from '../FeedItem';
+import Spinner from '../Spinner';
+import { FeedItem } from '../FeedItem';
+import { StoryType } from '../../types';
 
-type FeedProps = {
-  feedType: string;
-};
-
-const Feed: React.FC<FeedProps> = ({ feedType }) => {
+const Feed = ({ feedType }: { feedType: string }) => {
   const { page } = useParams<'page'>();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
@@ -16,11 +14,11 @@ const Feed: React.FC<FeedProps> = ({ feedType }) => {
     const fetchData = async () => {
       setIsLoading(true);
       const response = await fetch(
-        `https://node-hnapi.herokuapp.com/${feedType}?page=${page}`
+        `https://node-hnapi.herokuapp.com/${feedType}?page=${page}`,
       );
       const feedData = await response.json();
       setData(feedData);
-      setIsLoading(false);
+      // setIsLoading(false);
     };
 
     fetchData();
@@ -29,13 +27,13 @@ const Feed: React.FC<FeedProps> = ({ feedType }) => {
   return (
     <div>
       {isLoading ? (
-        <p>Loading...</p>
+        <Spinner />
       ) : (
-        <>
-          {data.map((item: FeedItemData, index) => (
+        <div className="flex flex-col gap-2">
+          {data.map((item: StoryType, index: number) => (
             <FeedItem item={item} index={index} key={item.id} />
           ))}
-        </>
+        </div>
       )}
     </div>
   );

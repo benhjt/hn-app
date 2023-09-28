@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedItem renders correctly 1`] = `
+<div>
+  <div
+    class="flex mb-2"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex flex-row align space-x-2"
+      >
+        <a
+          class="peer visited:text-gray-500"
+          href="https://www.phoronix.com/news/Linux-6.2-Btrfs-EXT4"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Btrfs in Linux 6.2 brings performance improvements, better RAID 5/6 reliability
+        </a>
+        <a
+          class="peer-visited:text-gray-500"
+          href="phoronix.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          (
+          phoronix.com
+          )
+        </a>
+      </div>
+      <div
+        class="flex flex-row text-gray-500 text-xs"
+      >
+        93
+         points by 
+        <a
+          class="hover:underline"
+          href="/user/pantalaimon"
+        >
+          pantalaimon
+        </a>
+         
+        2 hours ago
+        <div
+          class="px-2"
+        >
+          |
+        </div>
+        <a
+          class="hover:underline"
+          href="/story/33961106"
+        >
+          79
+           comments
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex mb-2"
+  >
+    <div
+      class="flex flex-col"
+    >
+      <div
+        class="flex flex-row align space-x-2"
+      >
+        <a
+          class="peer visited:text-gray-500"
+          href="https://twitter.com/tier10k/status/1602446984090107905"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          SBF Arrested by Bahamian Authorities
+        </a>
+        <a
+          class="peer-visited:text-gray-500"
+          href="twitter.com"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          (
+          twitter.com
+          )
+        </a>
+      </div>
+      <div
+        class="flex flex-row text-gray-500 text-xs"
+      >
+        172
+         points by 
+        <a
+          class="hover:underline"
+          href="/user/zone411"
+        >
+          zone411
+        </a>
+         
+        38 minutes ago
+        <div
+          class="px-2"
+        >
+          |
+        </div>
+        <a
+          class="hover:underline"
+          href="/story/33962083"
+        >
+          109
+           comments
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,14 +1,12 @@
-import React from 'react';
-
 import { Link } from 'react-router-dom';
+import Separator from '../Separator';
 import NavLink from '../NavLink';
 
-const Separator = () => <div className="h-5/6 w-px bg-black">&nbsp;</div>;
-
 const Header = () => (
-  <nav className="flex px-2 bg-orange-600">
-    <Link to="/news/1" className="font-semibold mr-3">
-      Hacker News
+  <nav className="flex px-2 bg-orange-600 items-center">
+    <Link to="/news/1" className="font-semibold mr-3 flex items-center">
+      <img src="/logo32.png" alt="Hacker News" />
+      <span className="p-2">Hacker News</span>
     </Link>
     <NavLink to="/news/1">Top</NavLink>
     <Separator />

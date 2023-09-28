@@ -3,7 +3,7 @@
 exports[`NavLink renders correctly 1`] = `
 <div>
   <a
-    class="text-black no-underline mx-2"
+    class="text-black no-underline"
     href="/news/1"
   >
     Top
@@ -15,7 +15,7 @@ exports[`NavLink renders correctly when link is selected 1`] = `
 <div>
   <a
     aria-current="page"
-    class="text-white no-underline mx-2"
+    class="text-white no-underline"
     href="/news/1"
   >
     Top

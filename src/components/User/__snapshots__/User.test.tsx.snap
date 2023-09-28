@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedItem renders correctly 1`] = `
+<div>
+  <table
+    class="table-auto border-collapse max-w- w-full"
+  >
+    <tbody>
+      <tr>
+        <td>
+          User:
+        </td>
+        <td>
+          joebloggs123
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Created:
+        </td>
+        <td>
+          January 01, 2022
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Karma:
+        </td>
+        <td>
+          54
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

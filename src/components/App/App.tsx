@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   BrowserRouter as Router,
   Navigate,
@@ -8,13 +6,15 @@ import {
 } from 'react-router-dom';
 import Header from '../Header';
 import Feed from '../Feed';
+import Story from '../Story';
+import UserContainer from '../User';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="container mx-auto">
       <Router>
         <Header />
-        <main>
+        <main className="px-2 pt-2 bg-slate-50">
           <Routes>
             <Route path="/" element={<Navigate replace to="/news/1" />} />
             <Route path="/news/:page" element={<Feed feedType="news" />} />
@@ -22,6 +22,8 @@ const App: React.FC = () => {
             <Route path="/show/:page" element={<Feed feedType="show" />} />
             <Route path="/ask/:page" element={<Feed feedType="ask" />} />
             <Route path="/jobs/:page" element={<Feed feedType="jobs" />} />
+            <Route path="/story/:id" element={<Story />} />
+            <Route path="/user/:username" element={<UserContainer />} />
           </Routes>
         </main>
       </Router>
