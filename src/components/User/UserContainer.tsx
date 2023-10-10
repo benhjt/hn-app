@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import User from './User';
 import { UserType } from '../../types';
+import Spinner from '../Spinner';
 
-const UserContainer = () => {
+const UserWrapper = () => {
   const { username } = useParams<'username'>();
   const [isLoading, setIsLoading] = useState(false);
   const [user, setUser] = useState<UserType>();
@@ -23,10 +24,8 @@ const UserContainer = () => {
   }, [username]);
 
   return (
-    <div>
-      {isLoading ? <p>Loading...</p> : user ? <User user={user} /> : ''}
-    </div>
+    <div>{isLoading ? <Spinner /> : user ? <User user={user} /> : ''}</div>
   );
 };
 
-export default UserContainer;
+export default UserWrapper;

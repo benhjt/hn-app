@@ -1,1 +1,1 @@
-export { default } from './UserContainer';
+export { default } from './UserWrapper';

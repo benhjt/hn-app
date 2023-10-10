@@ -7,7 +7,7 @@ import {
 import Header from '../Header';
 import Feed from '../Feed';
 import Story from '../Story';
-import UserContainer from '../User';
+import UserWrapper from '../User';
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
             <Route path="/ask/:page" element={<Feed feedType="ask" />} />
             <Route path="/jobs/:page" element={<Feed feedType="jobs" />} />
             <Route path="/story/:id" element={<Story />} />
-            <Route path="/user/:username" element={<UserContainer />} />
+            <Route path="/user/:username" element={<UserWrapper />} />
           </Routes>
         </main>
       </Router>
