@@ -2,6 +2,7 @@ export type StoryType = {
   id: number;
   title: string;
   points: number;
+  content: string;
   user: string;
   time: number;
   time_ago: string;
