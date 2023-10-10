@@ -18,7 +18,7 @@ const Feed = ({ feedType }: { feedType: string }) => {
       );
       const feedData = await response.json();
       setData(feedData);
-      // setIsLoading(false);
+      setIsLoading(false);
     };
 
     fetchData();
