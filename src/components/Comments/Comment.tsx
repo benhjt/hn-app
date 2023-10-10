@@ -27,7 +27,7 @@ const Comment = ({ comment }: { comment: CommentType }) => {
     const _calculateThreadSize = (thread: CommentType) => {
       let threadSize = 0;
 
-      let flat = (thread: CommentType) => {
+      const flat = (thread: CommentType) => {
         threadSize++;
         thread?.comments?.forEach(flat);
       };
