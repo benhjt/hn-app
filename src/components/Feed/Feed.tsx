@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import Spinner from '../Spinner';
 import { FeedItem } from '../FeedItem';
@@ -9,6 +9,7 @@ const Feed = ({ feedType }: { feedType: string }) => {
   const { page } = useParams<'page'>();
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
+  const nextPage = (Number(page) || 0) + 1;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,11 +30,16 @@ const Feed = ({ feedType }: { feedType: string }) => {
       {isLoading ? (
         <Spinner />
       ) : (
-        <div className="flex flex-col gap-2">
-          {data.map((item: StoryType, index: number) => (
-            <FeedItem item={item} index={index} key={item.id} />
-          ))}
-        </div>
+        <>
+          <div className="flex flex-col gap-2">
+            {data.map((item: StoryType, index: number) => (
+              <FeedItem item={item} index={index} key={item.id} />
+            ))}
+          </div>
+          <Link to={`/${feedType}/${nextPage}`} className="hover:underline">
+            More
+          </Link>
+        </>
       )}
     </div>
   );
