@@ -14,7 +14,7 @@ const App = () => {
     <div className="container mx-auto">
       <Router>
         <Header />
-        <main className="px-2 pt-2 bg-slate-50">
+        <main className="p-2 bg-slate-50 mb-10">
           <Routes>
             <Route path="/" element={<Navigate replace to="/news/1" />} />
             <Route path="/news/:page" element={<Feed feedType="news" />} />
