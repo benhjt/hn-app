@@ -8,6 +8,7 @@ const item = {
   title: 'This cool story!',
   points: 54,
   user: 'username123',
+  content: '<p>test test test</p>',
   time: 1670693712,
   time_ago: '8 hours ago',
   comments_count: 226,
