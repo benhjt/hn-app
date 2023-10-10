@@ -29,6 +29,7 @@ const Story = () => {
   return (
     <div>
       <FeedItem item={story} index={-1} />
+      <div dangerouslySetInnerHTML={{ __html: story.content }}></div>
       <Comments comments={story.comments} />
     </div>
   );
