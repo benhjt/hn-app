@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Feed /> renders correctly 1`] = `
+<div>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="flex flex-col"
+      >
+        <div
+          class="flex flex-row align space-x-2"
+        >
+          <a
+            class="peer visited:text-gray-500"
+            href="https://eli.thegreenplace.net/2023/better-http-server-routing-in-go-122/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Better HTTP server routing in Go 1.22
+          </a>
+          <a
+            class="peer-visited:text-gray-500"
+            href="eli.thegreenplace.net"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            (
+            eli.thegreenplace.net
+            )
+          </a>
+        </div>
+        <div
+          class="flex flex-row text-gray-500 text-xs"
+        >
+          173
+           points by 
+          <a
+            class="hover:underline"
+            href="/user/ingve"
+          >
+            ingve
+          </a>
+           
+          4 hours ago
+          <div
+            class="px-2"
+          >
+            |
+          </div>
+          <a
+            class="hover:underline"
+            href="/story/37898999"
+          >
+            97
+             comments
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a
+    class="hover:underline"
+    href="/news/2"
+  >
+    More
+  </a>
+</div>
+`;
