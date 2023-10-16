@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment />> renders correctly 1`] = `
+<div>
+  <div
+    class="pl-5"
+  >
+    <div
+      class="flex py-1 text-gray-500 text-xs"
+    >
+      <a
+        class="hover:underline"
+        href="/user/ingve"
+      >
+        ingve
+      </a>
+      <span
+        class="ml-2"
+      >
+        4 hours ago
+      </span>
+      <div
+        class="px-2"
+      >
+        |
+      </div>
+      <button
+        aria-label="Hide replies"
+        class="bg-transparent border-none cursor-pointer p-0 select-none"
+      >
+        [-]
+      </button>
+    </div>
+    <div>
+      hello
+    </div>
+    <div />
+  </div>
+</div>
+`;
