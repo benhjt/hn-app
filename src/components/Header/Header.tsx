@@ -5,7 +5,7 @@ import NavLink from '../NavLink';
 const Header = () => (
   <nav className="flex px-2 bg-orange-600 items-center">
     <Link to="/news/1" className="font-semibold mr-3 flex items-center">
-      <img src="/logo32.png" alt="Hacker News" />
+      <img src="logo32.png" alt="Hacker News" />
       <span className="p-2">Hacker News</span>
     </Link>
     <NavLink to="/news/1">Top</NavLink>
